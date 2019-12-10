@@ -8,9 +8,10 @@ export class MainResolver {
 
     @Query(returns => [String])
     async categories() {
-        const cat =  await axios.get(`${this.BASE_URL}/categories`);
+        const cat = await axios.get(`${this.BASE_URL}/categories`);
         return cat.data;
     }
+
     @Query(returns => Joke)
     async joke(
         @Arg("category", {nullable: false}) category: string,

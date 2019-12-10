@@ -2,7 +2,7 @@ import {useDispatch} from 'react-redux';
 import React, {useEffect} from 'react';
 import {useQuery} from '@apollo/react-hooks';
 import styled, {css} from 'styled-components';
-import { FadeLoader } from "react-spinners";
+import {FadeLoader} from "react-spinners";
 import {CATEGORIES} from '../../graphql/queries';
 import Actions from './duck/redux';
 
@@ -91,9 +91,9 @@ const Categories = () => {
         <CategoriesContainer>
             {
                 loading &&
-                    <LoaderContainer>
+                <LoaderContainer>
                     <FadeLoader color="#fc0"/>
-                    </LoaderContainer>
+                </LoaderContainer>
             }
             {
                 !loading && !error && data &&
@@ -112,7 +112,7 @@ const Categories = () => {
 
                 </CategoriesGrid>
             }
-            </CategoriesContainer>
+        </CategoriesContainer>
     );
 };
 

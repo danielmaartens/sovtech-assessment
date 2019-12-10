@@ -1,0 +1,35 @@
+# create network using: docker network create --subnet=172.7.0.0/16 time-study
+# To run images manually:
+# docker run -d -p 4000:4000 --name chucklegen-server chucklegen/server
+# docker run -d -p 5000:5000 --name chucklegen-app chucklegen/app
+
+version: "3.0"
+
+services:
+
+  chucklegen-server:
+    container_name: chucklegen-server
+    image: chucklegen/server:latest
+    restart: always
+    ports:
+      - 4000:4000
+    networks:
+      chucklenet:
+        ipv4_address: 172.7.0.4
+
+  chucklegen-app:
+    container_name: chucklegen-app
+    image: chucklegen/app:latest
+    restart: always
+    environment:
+      - SERVER_URL=http://172.7.0.4:4000
+    ports:
+      - 5000:5000
+    networks:
+      chucklenet:
+        ipv4_address: 172.7.0.3
+
+networks:
+  chucklenet:
+    external:
+      name: chucklenet

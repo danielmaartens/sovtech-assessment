@@ -3,7 +3,7 @@ import {
     TypedUseSelectorHook
 } from "react-redux";
 import React, {useEffect} from 'react';
-import { BarLoader } from "react-spinners";
+import {BarLoader} from "react-spinners";
 
 import styled, {keyframes} from 'styled-components';
 import {RootState} from "../../types";
@@ -21,7 +21,7 @@ const Joke = () => {
 
             if (laugh && slap) {
                 const laughSoundFile = laughSounds[Math.floor(Math.random() * laughSounds.length)];
-                laugh.setAttribute('src', `/sounds/laughs/${laughSoundFile}`);
+                laugh.setAttribute('src', require(`../../assets/sounds/laughs/${laughSoundFile}`));
 
                 slap.addEventListener("ended", () => {
                     (laugh as HTMLAudioElement).play();
@@ -38,24 +38,24 @@ const Joke = () => {
     }
 
     const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3px 0 10px 0;
-    width: 100%;
-    font-family: 'Gothic A1', sans-serif;
-    
-    @media (min-width: 1200px) {
-        width: 65%;
-        margin-top: 10px;
-    }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3px 0 10px 0;
+        width: 100%;
+        font-family: 'Gothic A1', sans-serif;
+        
+        @media (min-width: 1200px) {
+            width: 65%;
+            margin-top: 10px;
+        }
     `;
 
     const JokeContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
     `;
 
     const NoJoke = styled.div`
@@ -64,17 +64,16 @@ const Joke = () => {
         width:100%;
         padding: 10px 0;
         border-bottom: 1px solid grey;
-            display: flex;
-    align-items: center;
-    justify-content: center;
-    clear: both;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clear: both;
     
-    @media (min-width: 1200px) {
+        @media (min-width: 1200px) {
             border: none;
             font-size: 2em;
         }
-}
-
+       }
 
         span {
             text-transform: uppercase;
@@ -94,38 +93,34 @@ const Joke = () => {
         width: 100%;
         
          @media (min-width: 1200px) {
-        width: 65%;
-    }
+            width: 65%;
+            }
     `;
 
     const JokeText = styled.div`
         min-height: 100px;
         flex: 1;
         font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: white;
-    font-weight: bold;
-    background-color: #1e2d47;
-    padding: 20px 10px 10px 10px;
-    cursor: pointer;
-
+        font-weight: bold;
+        background-color: #1e2d47;
+        padding: 20px 10px 10px 10px;
+        cursor: pointer;
     `;
 
     const LaughingChuck = styled.img`
-    height: 75px;
-    // bottom: 0;
-    // position: absolute;
+        height: 75px;
+    
     `;
 
     const LaughingChuckRight = styled(LaughingChuck)`
-        // right: 0;
         float: right
     `;
 
     const LaughingChuckLeft = styled(LaughingChuck)`
-        // left: 0;
         float: left;
     `;
 
@@ -142,13 +137,12 @@ const Joke = () => {
     `;
 
     const LoaderContainer = styled.div`
-    height: 100px;
+        height: 100px;
         padding: 20px 10px 10px 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        
     `;
 
     const flashingText = keyframes`
@@ -158,7 +152,7 @@ const Joke = () => {
       `;
 
     const LoadingText = styled.div`
-    font-size: 1.5em;
+        font-size: 1.5em;
         animation: ${flashingText} 1s linear infinite;
         margin-bottom: 5px;
     `;
@@ -176,9 +170,7 @@ const Joke = () => {
             {
                 !joke && !jokeRequested &&
                 <NoJoke>
-
                     <div>
-
                         <InfoContentContainer>
                             <InfoContent>A <b>Chuckle</b> is a Chuck Norris joke.&nbsp;</InfoContent>
                             <InfoContent> He alone puts the chuck in <em>your</em> chuckle.&nbsp;</InfoContent>
@@ -189,7 +181,6 @@ const Joke = () => {
                             <InfoContent>Select <b>RANDOM</b> for a <b>random Chuckle</b>.</InfoContent>
                         </InfoContentContainer>
                     </div>
-
                 </NoJoke>
             }
             {
@@ -203,7 +194,6 @@ const Joke = () => {
                     </JokeText>
                 </JokeContainer>
             }
-
         </Container>
     )
 };

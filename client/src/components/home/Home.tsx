@@ -6,7 +6,6 @@ import Header from "./Header";
 const Categories = lazy(() => import('./Categories'));
 const Joke = lazy(() => import('./Joke'));
 
-
 const Home: React.FC = () => {
 
     const Container = styled.div`
@@ -17,15 +16,15 @@ const Home: React.FC = () => {
     `;
 
     const HeaderJokeContainer = styled.div`
-    background-color: white;
-    z-index: 1;
+        background-color: white;
+        z-index: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-            position: sticky;
-            top: 0;
-            width: 100%;
+        position: sticky;
+        top: 0;
+        width: 100%;
     `;
 
     const ButtonContainer = styled.div`
@@ -38,7 +37,7 @@ const Home: React.FC = () => {
 
     return (
         <Container>
-            <audio id="slap" src="/sounds/slap.mp3"></audio>
+            <audio id="slap" src={require('../../assets/sounds/slap.mp3')}></audio>
             <audio id="laugh"></audio>
             <HeaderJokeContainer>
                 <Header/>
@@ -48,10 +47,10 @@ const Home: React.FC = () => {
             </HeaderJokeContainer>
 
             <ButtonContainer>
-            <RandomJokeButton/>
-            <Suspense fallback={'Loading...'}>
-                <Categories/>
-            </Suspense>
+                <RandomJokeButton/>
+                <Suspense fallback={'Loading...'}>
+                    <Categories/>
+                </Suspense>
             </ButtonContainer>
         </Container>
     )
