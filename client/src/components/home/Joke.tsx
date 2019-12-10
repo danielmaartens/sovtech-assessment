@@ -56,15 +56,12 @@ const Joke = () => {
     flex-direction: column;
     height: 100%;
     flex: 1;
-    
-    
-    
     `;
 
     const NoJoke = styled.div`
         text-align: center;
         height: 100%;
-        width: 100%;
+        width:100%;
         padding: 10px 0;
         border-bottom: 1px solid grey;
             display: flex;
@@ -74,6 +71,7 @@ const Joke = () => {
     
     @media (min-width: 1200px) {
             border: none;
+            font-size: 2em;
         }
 }
 
@@ -144,11 +142,13 @@ const Joke = () => {
     `;
 
     const LoaderContainer = styled.div`
+    height: 100px;
+        padding: 20px 10px 10px 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 20px;
+        
     `;
 
     const flashingText = keyframes`
@@ -158,6 +158,7 @@ const Joke = () => {
       `;
 
     const LoadingText = styled.div`
+    font-size: 1.5em;
         animation: ${flashingText} 1s linear infinite;
         margin-bottom: 5px;
     `;
@@ -168,8 +169,8 @@ const Joke = () => {
             {
                 jokeRequested &&
                 <LoaderContainer>
-                    <LoadingText>Loading Joke</LoadingText>
-                    <BarLoader/>
+                    <LoadingText>Loading Joke...</LoadingText>
+                    <BarLoader color={'#34B667'} height={10} width={200}/>
                 </LoaderContainer>
             }
             {
@@ -180,7 +181,7 @@ const Joke = () => {
 
                         <InfoContentContainer>
                             <InfoContent>A <b>Chuckle</b> is a Chuck Norris joke.&nbsp;</InfoContent>
-                            <InfoContent> He and he alone puts the chuck in <em>your</em> chuckle.&nbsp;</InfoContent>
+                            <InfoContent> He alone puts the chuck in <em>your</em> chuckle.&nbsp;</InfoContent>
                         </InfoContentContainer>
 
                         <InfoContentContainer>
