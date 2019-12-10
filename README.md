@@ -8,9 +8,12 @@ This app was written using Mobile First principles.
 # Tech Stack
 
 - Docker
-- NodeJS
+- NodeJS (12.9)
 - TypeScript
 - GraphQL
+- ReactJS (16.12)
+- Apollo
+- Redux
 
 ### Server
 - ApolloServer
