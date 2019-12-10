@@ -5,6 +5,8 @@ A Single Page Application that displays Chuck Norris jokes using chucknorris.io
 
 This app was written using Mobile First principles.
 
+**TIP:** If your speaker are muted, unmute them.
+
 # Tech Stack
 
 - Docker
