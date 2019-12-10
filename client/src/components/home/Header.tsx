@@ -10,6 +10,7 @@ const Header = () => {
 
     const HeaderContainer = styled.div`
         display: flex;
+        height: 170px;
         width: 100%;
         background-color: darkgrey;
         flex-direction: row;
