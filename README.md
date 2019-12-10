@@ -75,20 +75,7 @@ cd client && npm run prod
 cd server && npm run prod
 ```
 
-### Docker troubleshooting
-- `Bind for 0.0.0.0:<PORT> failed: port is already allocated` - try this:
-Note that this app runs on ports 4000 and 5000.
-```$xslt
-kill $(lsof -t -i:5000)
-kill $(lsof -t -i:4000)
-```
 
--  Cannot create container
-This app will run two containers, namely `chucklegen-server` and `chucklegen-app`
-```$xslt
-docker stop chucklegen-server && docker rm chucklegen-server
-docker stop chucklegen-app && docker rm chucklegen-app
-```
 
 
 
