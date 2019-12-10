@@ -17,13 +17,14 @@ This app was written using Mobile First principles.
 
 ### Server
 - ApolloServer
-- TypeGraphql
+- TypeGraphQL
 - Axios
 
 ### Client
 - ReactJS (16.12)
 - Redux (with redux-sauce and redux-saga)
 - Apollo Boost
+- GraphQL
 
 
 ## Assumptions
