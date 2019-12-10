@@ -38,7 +38,7 @@ A script is provided that launches the app in a docker container:
 sh run.sh
 ```
 
-#### Using Scripts (Windows)
+#### Without Scripts
 ```
 docker network create --subnet=172.7.0.0/16 chucklenet 2>/dev/null
 cd client
