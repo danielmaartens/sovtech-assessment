@@ -10,7 +10,7 @@ const Header = () => {
 
     const HeaderContainer = styled.div`
         display: flex;
-        height: 170px;
+        // height: 170px;
         width: 100%;
         background-color: darkgrey;
         flex-direction: row;
@@ -36,7 +36,7 @@ const Header = () => {
 
     const ChuckLaughImgRight = styled.img`
         width: 170px;
-        position: relative;
+        position: fixed;
         right: -164px;
         animation: ${ChuckLaughingImgAnimation} 3s linear 1s 1 normal forwards;
     `;
