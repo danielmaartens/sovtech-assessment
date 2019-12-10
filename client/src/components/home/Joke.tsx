@@ -66,7 +66,8 @@ const Joke = () => {
         align-items: center;
         justify-content: center;
         clear: both;
-    
+        font-size: 1.5em;
+        
         @media (min-width: 1200px) {
             font-size: 2em;
         }
@@ -103,9 +104,8 @@ const Joke = () => {
         align-items: center;
         justify-content: center;
         color: #1e2d47;
-        // font-weight: bold;
         background-color: white;
-        padding: 20px 10px 10px 10px;
+        padding: 20px;
         cursor: pointer;
     `;
 
@@ -135,8 +135,8 @@ const Joke = () => {
     `;
 
     const LoaderContainer = styled.div`
-        height: 100px;
-        padding: 20px 10px 10px 10px;
+        height: 124px;
+        padding: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
