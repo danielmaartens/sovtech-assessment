@@ -1,7 +1,9 @@
 # SovTech Technical Assessment
 
 ## The Chuckle Generator
-A Single Page (Mobile First) Application that displays Chuck Norris jokes using chucknorris.io
+A Single Page Application that displays Chuck Norris jokes using chucknorris.io
+
+This app was written using Mobile First principles.
 
 # Tech Stack
 
