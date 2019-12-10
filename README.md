@@ -58,7 +58,7 @@ cd ../server && npm install
 #### Development
 ##### App
 ```
-cd client && npm run dev
+cd client && npm run start
 ```
 ##### Server
 ```
