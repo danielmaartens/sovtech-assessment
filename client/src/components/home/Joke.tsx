@@ -62,18 +62,15 @@ const Joke = () => {
         text-align: center;
         height: 100%;
         width:100%;
-        padding: 10px 0;
-        border-bottom: 1px solid grey;
+        padding-top: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         clear: both;
     
         @media (min-width: 1200px) {
-            border: none;
             font-size: 2em;
         }
-       }
 
         span {
             text-transform: uppercase;
