@@ -169,8 +169,8 @@ const Joke = () => {
                 <NoJoke>
                     <div>
                         <InfoContentContainer>
-                            <InfoContent>A <b>Chuckle</b> is a Chuck Norris joke.&nbsp;</InfoContent>
-                            <InfoContent> He alone puts the chuck in <em>your</em> chuckle.&nbsp;</InfoContent>
+                            <InfoContent>A <b>Chuckle</b> is a Chuck Norris joke.</InfoContent>
+                            <InfoContent> He puts the chuck in your chuckle.</InfoContent>
                         </InfoContentContainer>
 
                         <InfoContentContainer>
