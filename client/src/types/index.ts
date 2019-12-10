@@ -1,13 +1,14 @@
 import { Action } from "redux";
 
 export interface RootState {
-    jokeRequested: boolean,
-    jokeRequestSuccess: boolean,
-    jokeRequestError: any,
-    joke: JokeI | null,
-    selectedJokeCategory: string | null,
-    categories: string[],
+    jokeRequested: boolean
+    jokeRequestSuccess: boolean
+    jokeRequestError: any
+    joke: JokeI | null
+    selectedJokeCategory: string | null
+    categories: string[]
     laughSounds: string[]
+    categoryColours: string[]
 }
 
 export interface ActionI<T> extends Action {
@@ -15,6 +16,6 @@ export interface ActionI<T> extends Action {
 }
 
 export interface JokeI {
-    category: string | null,
+    category: string
     text: string
 }

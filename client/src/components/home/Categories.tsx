@@ -1,11 +1,13 @@
-import {useDispatch} from 'react-redux';
 import React, {useEffect} from 'react';
+import {TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector} from 'react-redux';
 import {useQuery} from '@apollo/react-hooks';
 import styled, {css} from 'styled-components';
 import {FadeLoader} from "react-spinners";
 import {CATEGORIES} from '../../graphql/queries';
 import Actions from './duck/redux';
+import {RootState} from "../../types";
 
+const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector;
 
 const Categories = () => {
     const dispatch = useDispatch();
@@ -102,7 +104,6 @@ const Categories = () => {
                     {
                         data.categories.map((name: string, index: number) => (
                             <Category style={{backgroundColor: `${colours[index]}`}} onClick={() => {
-                                // console.log(`${name} clicked`);
                                 dispatch(Actions.getJoke(name))
                             }} key={`cat--${index}`}>
                                 {name}

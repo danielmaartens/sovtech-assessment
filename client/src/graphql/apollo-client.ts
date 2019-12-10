@@ -6,7 +6,6 @@ const Client = new ApolloClient({
 });
 
 export const query = (query: any, variables?: any) => {
-    console.log('query requested');
     return Client.query({
         query: query,
         variables: variables,

@@ -29,7 +29,25 @@ const INITIAL_STATE = Immutable<RootState>({
         'laugh-to-self.mp3',
         'male-short-laugh.mp3',
         'maniacal-witches.mp3'
-    ]
+    ],
+    categoryColours: [
+        '#b6940e',
+        '#004f94',
+        '#911002',
+        '#1e2d47',
+        '#be6600',
+        '#b6940e',
+        '#004f94',
+        '#911002',
+        '#1e2d47',
+        '#be6600',
+        '#b6940e',
+        '#004f94',
+        '#911002',
+        '#1e2d47',
+        '#be6600',
+        '#b6940e',
+    ],
 });
 
 const jokeRequested = (state = INITIAL_STATE, action: any): ImmutableObject<RootState> => {

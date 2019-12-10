@@ -8,11 +8,10 @@ import {BarLoader} from "react-spinners";
 import styled, {keyframes} from 'styled-components';
 import {RootState} from "../../types";
 
-
 const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector;
 
 const Joke = () => {
-    const {joke, jokeRequested, laughSounds} = useSelector(state => state);
+    const {joke, jokeRequested, laughSounds, categories, categoryColours: colours} = useSelector(state => state);
 
     useEffect(() => {
         if (joke) {
@@ -77,33 +76,35 @@ const Joke = () => {
         }
     `;
 
+    let categoryColour = '';
+    if (joke) {
+        const indexOfCategory = categories.indexOf(joke.category);
+        categoryColour = colours[indexOfCategory];
+    }
     const JokeCategory = styled.div`
+        background-color: ${categoryColour};
+        color: white;
         display: flex;
-        justify-content: center;
         align-items: center;
         padding: 2px;
         flex: 0.2;
         text-transform: uppercase;
-        position: absolute;
-        background: white;
-        opacity: 0.5;
         width: 100%;
-        
-         @media (min-width: 1200px) {
-            width: 65%;
-            }
+        height: 20px;
+        font-size: medium;
     `;
 
     const JokeText = styled.div`
+        font-family: 'Calistoga', cursive;
         min-height: 100px;
         flex: 1;
-        font-size: 1.5em;
+        font-size: 1.8em;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-weight: bold;
-        background-color: #1e2d47;
+        color: #1e2d47;
+        // font-weight: bold;
+        background-color: white;
         padding: 20px 10px 10px 10px;
         cursor: pointer;
     `;
