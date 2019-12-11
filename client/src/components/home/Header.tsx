@@ -20,7 +20,7 @@ const Header = () => {
              right: -164px;
         }
         to {
-            right: -90px;
+            right: -84px;
         }
     `;
 
@@ -50,6 +50,7 @@ const Header = () => {
         flex: 1;
         position: relative;
         bottom: 36px;
+        z-index: 1;
     `;
 
     const TheChuck = styled.div`

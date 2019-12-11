@@ -42,7 +42,7 @@ const Categories = () => {
         width: 100%;
       
         @media (min-width: 798px) {
-            width: 80%;
+            width: 70%;
         }
     `;
 
