@@ -40,7 +40,6 @@ const Joke = () => {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 3px 0 10px 0;
         width: 100%;
         font-family: 'Gothic A1', sans-serif;
         
@@ -55,13 +54,14 @@ const Joke = () => {
         flex-direction: column;
         height: 100%;
         flex: 1;
+        margin: 2px;
     `;
 
     const NoJoke = styled.div`
         text-align: center;
-        height: 100%;
+        height: 145px;
         width:100%;
-        padding-top: 10px;
+        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -90,7 +90,6 @@ const Joke = () => {
         padding: 2px;
         flex: 0.2;
         text-transform: uppercase;
-        width: 100%;
         height: 20px;
         font-size: medium;
     `;
@@ -114,7 +113,7 @@ const Joke = () => {
     `;
 
     const InfoContentContainer = styled.div`
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     `;
 
     const LoaderContainer = styled.div`
