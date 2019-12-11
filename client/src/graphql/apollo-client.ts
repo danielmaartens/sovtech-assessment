@@ -2,7 +2,7 @@ import ApolloClient from 'apollo-boost';
 import config from '../config';
 
 const Client = new ApolloClient({
-    uri: config.SERVER_URL,
+    uri: config.SERVER_HOST,
 });
 
 export const query = (query: any, variables?: any) => {
