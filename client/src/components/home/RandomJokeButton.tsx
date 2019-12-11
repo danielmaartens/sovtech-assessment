@@ -28,14 +28,15 @@ const RandomJokeButton = () => {
         color: white;
         font-weight: bold;
         transition: all .2s ease-in-out;
+        font-size: 1.2em;
         
         &:hover {
         transform: scale(1.05);
         }
         
-        @media (min-width: 950px) {
+        @media (min-width: 798px) {
             height: 80px;
-            width: 65%;
+            width: 80%;
             margin: 0;
             font-size: 2em;
         }

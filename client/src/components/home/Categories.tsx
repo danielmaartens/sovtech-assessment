@@ -32,7 +32,7 @@ const Categories = () => {
         transform: scale(1.1);
         }
         
-        @media (min-width: 950px) {
+        @media (min-width: 798px) {
             height: 50px;
             font-size: 2em;
         }
@@ -41,20 +41,20 @@ const Categories = () => {
     const CategoriesContainer = styled.div`
         width: 100%;
       
-        @media (min-width: 950px) {
-            width: 65%;
+        @media (min-width: 798px) {
+            width: 80%;
         }
     `;
 
     const CategoriesGrid = styled.div`
-        margin: 10px;
+        margin: 5px 10px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
         grid-auto-rows: auto;
-        grid-row-gap: .5rem;
-        grid-column-gap: 1rem;
+        grid-row-gap: .3rem;
+        grid-column-gap: .3rem;
         
-          @media (min-width: 950px) {
+        @media (min-width: 798px) {
             margin: 10px 0 0 0;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }

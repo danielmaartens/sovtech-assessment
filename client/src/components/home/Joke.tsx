@@ -44,8 +44,8 @@ const Joke = () => {
         width: 100%;
         font-family: 'Gothic A1', sans-serif;
         
-        @media (min-width: 950px) {
-            width: 65%;
+        @media (min-width: 798px) {
+            width: 80%;
             margin-top: 10px;
         }
     `;
@@ -68,7 +68,7 @@ const Joke = () => {
         clear: both;
         font-size: 1.5em;
         
-        @media (min-width: 950px) {
+        @media (min-width: 798px) {
             font-size: 2em;
         }
 
