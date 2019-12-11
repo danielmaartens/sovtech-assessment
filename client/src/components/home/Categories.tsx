@@ -1,13 +1,10 @@
 import React, {useEffect} from 'react';
-import {TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {useQuery} from '@apollo/react-hooks';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import {FadeLoader} from "react-spinners";
 import {CATEGORIES} from '../../graphql/queries';
 import Actions from './duck/redux';
-import {RootState} from "../../types";
-
-const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector;
 
 const Categories = () => {
     const dispatch = useDispatch();

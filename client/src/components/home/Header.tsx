@@ -1,22 +1,17 @@
-import React, {useState, useEffect} from 'react';
-import styled, {keyframes, css} from 'styled-components';
+import React from 'react';
+import styled, {keyframes} from 'styled-components';
 import ChuckGuns from '../../assets/img/chuck-guns.png';
 import ChuckLaughing from '../../assets/img/chuck-norris-laughing-right.png';
 
-
 const Header = () => {
-
-    const [startTransition, setStartTransition] = useState(false);
 
     const HeaderContainer = styled.div`
         display: flex;
-        // height: 170px;
         width: 100%;
         background-color: darkgrey;
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
-     
     `;
 
     const ChuckLaughingImgAnimation = keyframes`
@@ -64,15 +59,7 @@ const Header = () => {
         color: #fff;
     `;
 
-    const Word = styled.span`
-        font-family: 'Anton', Helvetica, sans-serif; 
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: -.07em;
-        opacity: 0;
-    `;
-
-    const firstWordTransition = keyframes`
+    const firstWordAnimation = keyframes`
         0% {
           opacity: 0; 
         }
@@ -83,7 +70,7 @@ const Header = () => {
         }
     `;
 
-    const secondWordTransition = keyframes`
+    const secondWordAnimation = keyframes`
         0% {
             opacity: 0;       
         }
@@ -92,16 +79,6 @@ const Header = () => {
          font-size: 4em;
          opacity: 1;   
         }
-    `;
-
-    const FirstWord = styled(Word)`
-        letter-spacing: -.07em;
-        animation: ${firstWordTransition} .3s ease-in-out 0.3s 1 normal forwards;
-        animation-fill-mode: forwards;
-    `;
-
-    const SecondWord = styled(Word)`
-         animation: ${secondWordTransition} 0.1s cubic-bezier(.190, 1.000, .220, 1.000) 1.3s 1 normal forwards;
     `;
 
     const ThirdWordAnimation = keyframes`
@@ -114,6 +91,22 @@ const Header = () => {
         }
     `;
 
+    const Word = styled.span`
+        font-family: 'Anton', Helvetica, sans-serif; 
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: -.07em;
+        opacity: 0;
+    `;
+
+    const FirstWord = styled(Word)`
+        animation: ${firstWordAnimation} .3s ease-in-out 0.3s 1 normal forwards;
+    `;
+
+    const SecondWord = styled(Word)`
+         animation: ${secondWordAnimation} 0.1s cubic-bezier(.190, 1.000, .220, 1.000) 1.3s 1 normal forwards;
+    `;
+
     const ThirdWord = styled.div`
         font-family: 'Anton',sans-serif;
         font-size: 28px;
@@ -122,19 +115,8 @@ const Header = () => {
         letter-spacing: 4px;
         text-transform: uppercase;
         color: #fc0;
-    
         animation: ${ThirdWordAnimation} 0.3s cubic-bezier(.190, 1.000, .220, 1.000) 2.3s 1 normal forwards;
         transform: translateX(-1000%);
-    `;
-
-    const BannerBackground = styled.div`
-       background-color: darkgrey;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        z-index: -1;
     `;
 
     return (

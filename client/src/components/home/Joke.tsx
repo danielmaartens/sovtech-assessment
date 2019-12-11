@@ -109,23 +109,6 @@ const Joke = () => {
         cursor: pointer;
     `;
 
-    const LaughingChuck = styled.img`
-        height: 75px;
-    
-    `;
-
-    const LaughingChuckRight = styled(LaughingChuck)`
-        float: right
-    `;
-
-    const LaughingChuckLeft = styled(LaughingChuck)`
-        float: left;
-    `;
-
-    const InfoHeader = styled.div`
-        font-weight: bold;
-    `;
-
     const InfoContent = styled.div`
         display: block;
     `;
