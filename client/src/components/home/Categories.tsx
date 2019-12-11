@@ -47,7 +47,7 @@ const Categories = () => {
     `;
 
     const CategoriesGrid = styled.div`
-        margin: 5px 2px;
+        margin: 5px 10px;
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
         grid-auto-rows: auto;

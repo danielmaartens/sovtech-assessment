@@ -15,8 +15,9 @@ const RandomJokeButton = () => {
     const {categories} = useSelector(state => state);
 
     const GenerateJokeButton = styled.div`
-        width: calc(100% - 4px);
+        width: calc(100% - 20px);
         box-sizing: border-box;
+        margin: 0 10px;
         cursor: grabbing;
         background-color: #004f94;
         height: 50px;
