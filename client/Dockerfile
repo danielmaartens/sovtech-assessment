@@ -14,6 +14,7 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 5000
+EXPOSE 80
+EXPOSE 8080
 
-CMD [ "serve", "-s", "build" ]
+CMD [ "serve", "-s", "build", "-l", "80" ]

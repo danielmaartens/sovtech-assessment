@@ -5,6 +5,10 @@ A Single Page Application that displays Chuck Norris jokes using chucknorris.io
 
 This app was written using Mobile First principles.
 
+A publicly available version of this app can be viewed at:
+
+http://thechucklegenerator.com
+
 **TIP:** If your sound is muted, unmute.
 
 # Tech Stack

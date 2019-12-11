@@ -24,7 +24,8 @@ services:
     environment:
       - SERVER_URL=http://172.7.0.4:4000
     ports:
-      - 5000:5000
+      - 8080:8080
+      - 80:80
     networks:
       chucklenet:
         ipv4_address: 172.7.0.3

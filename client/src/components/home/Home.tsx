@@ -2,6 +2,7 @@ import React, {Suspense, lazy} from 'react';
 import styled from 'styled-components';
 import RandomJokeButton from "./RandomJokeButton";
 import Header from "./Header";
+import SuspenseLoader from "./SuspenseLoader";
 
 const Categories = lazy(() => import('./Categories'));
 const Joke = lazy(() => import('./Joke'));
@@ -39,16 +40,17 @@ const Home: React.FC = () => {
         <Container>
             <audio id="slap" src={require('../../assets/sounds/slap.mp3')}></audio>
             <audio id="laugh"></audio>
+
             <HeaderJokeContainer>
                 <Header/>
-                <Suspense fallback={'Loading...'}>
+                <Suspense fallback={<SuspenseLoader/>}>
                     <Joke/>
                 </Suspense>
             </HeaderJokeContainer>
 
             <ButtonContainer>
                 <RandomJokeButton/>
-                <Suspense fallback={'Loading...'}>
+                <Suspense fallback={<SuspenseLoader/>}>
                     <Categories/>
                 </Suspense>
             </ButtonContainer>
