@@ -33,7 +33,7 @@ const RandomJokeButton = () => {
         transform: scale(1.05);
         }
         
-        @media (min-width: 1200px) {
+        @media (min-width: 950px) {
             height: 80px;
             width: 65%;
             margin: 0;

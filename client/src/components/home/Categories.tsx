@@ -32,7 +32,7 @@ const Categories = () => {
         transform: scale(1.1);
         }
         
-        @media (min-width: 1200px) {
+        @media (min-width: 950px) {
             height: 50px;
             font-size: 2em;
         }
@@ -41,7 +41,7 @@ const Categories = () => {
     const CategoriesContainer = styled.div`
         width: 100%;
       
-        @media (min-width: 1200px) {
+        @media (min-width: 950px) {
             width: 65%;
         }
     `;
@@ -54,7 +54,7 @@ const Categories = () => {
         grid-row-gap: .5rem;
         grid-column-gap: 1rem;
         
-          @media (min-width: 1200px) {
+          @media (min-width: 950px) {
             margin: 10px 0 0 0;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }
